@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 
 #Change this
-XPATH_SIGNAL = "//*[@id='dealerName' and (contains(text(), 'MISTAKE') or contains(text(), 'TALK'))]"
-XPATH_TAKE = "/html/body/div/a[3]"
+XPATH_SIGNAL = "/html/body/div/div/div[3]/div/div/div[2]/div[4]/text() and (contains(text(), 'MISTAKE') or contains(text(), 'TALK'))"
+XPATH_TAKE = "/html/body/div/div/div[3]/div/div/div[2]/div[11]/button"
 
 
 def standBy():
@@ -36,7 +36,7 @@ def standBy():
 
 if(__name__=="__main__"):
     URL = input("\nDashboard URL: ")
-    driver = webdriver.Firefox() 
+    driver = webdriver.Chrome() 
     driver.get(URL)
     print("Browser launched")
 
