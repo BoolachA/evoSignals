@@ -8,7 +8,6 @@ import os
 #Change this
 XPATH_SIGNAL = "//*[@id='dealerName' and (contains(text(), 'MISTAKE') or contains(text(), 'TALK'))]"
 XPATH_TAKE = "/html/body/div/a[3]"
-DASHBOARD_URL = "https://evotools.onrender.com/"
 
 
 def standBy():
@@ -36,9 +35,10 @@ def standBy():
 
 
 if(__name__=="__main__"):
+    URL = input("\nDashboard URL: ")
     driver = webdriver.Firefox() 
-    driver.get(DASHBOARD_URL)
-    print("\nBrowser launched")
+    driver.get(URL)
+    print("Browser launched")
 
     waitForSignal = True
     input("Press any button to go on standBy mode")
