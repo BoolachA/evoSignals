@@ -51,5 +51,6 @@ if(__name__=="__main__"):
             os.system("cls")
             print("Unlocked, waiting for signals...")
         else:
+            os.system("cls")
             print("Not valid signal, still waiting...")
             continue
